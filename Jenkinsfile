@@ -9,17 +9,17 @@ pipeline{
     stages{
         stage('compile the code'){
             steps{
-                sh 'compile the code'
+                sh 'echo compile the code'
             }
         }
         stage('check the code quality'){
             steps{
-                sh 'check the code quality'
+                sh 'echo check the code quality'
             }
         }
         stage('Test cases'){
             steps{
-                sh 'Test cases'
+                sh 'echo Test cases'
             }
         }
 
