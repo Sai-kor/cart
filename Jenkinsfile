@@ -1,5 +1,8 @@
 @Library('roboshop') _
 
+log.info 'Starting'
+log.warning 'Nothing to do!'
+
 pipeline{
     agent{
         label 'WORKSTATION'
