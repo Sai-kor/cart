@@ -1,3 +1,5 @@
+@Library('roboshop') _
+
 pipeline{
     agent{
         label 'WORKSTATION'
