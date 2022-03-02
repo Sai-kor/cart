@@ -85,6 +85,14 @@ app.get('/metrics', (req, res) => {
     res.header('Content-Type', 'text/plain');
     res.send(register.metrics());
 });
+app.get('/metrics', (req, res) => {
+    res.header('Content-Type', 'text/plain');
+    res.send(register.metrics());
+});
+app.get('/metrics', (req, res) => {
+    res.header('Content-Type', 'text/plain');
+    res.send(register.metrics());
+});
 
 
 // get cart with id
