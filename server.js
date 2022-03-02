@@ -1,10 +1,4 @@
 const redis = require('redis');
-const redis = require('redis');
-const redis = require('redis');
-const redis = require('redis');
-const redis = require('redis');
-const redis = require('redis');
-
 const request = require('request');
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -14,12 +8,6 @@ const expPino = require('express-pino-logger');
 const promClient = require('prom-client');
 const Registry = promClient.Registry;
 const register = new Registry();
-const register = new Registry();
-const register = new Registry();
-const register = new Registry();
-const register = new Registry();
-const register = new Registry();
-
 const counter = new promClient.Counter({
     name: 'items_added',
     help: 'running count of items added to cart',
@@ -31,23 +19,7 @@ var redisConnected = false;
 
 var redisHost = process.env.REDIS_HOST || 'redis'
 var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
-var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
-var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
-var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
-var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
-var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
 var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-var cataloguePort = process.env.CATALOGUE_PORT || '8080'
-
-
 
 
 const logger = pino({
@@ -81,14 +53,6 @@ app.get('/health', (req, res) => {
 });
 
 // Prometheus
-app.get('/metrics', (req, res) => {
-    res.header('Content-Type', 'text/plain');
-    res.send(register.metrics());
-});
-app.get('/metrics', (req, res) => {
-    res.header('Content-Type', 'text/plain');
-    res.send(register.metrics());
-});
 app.get('/metrics', (req, res) => {
     res.header('Content-Type', 'text/plain');
     res.send(register.metrics());
